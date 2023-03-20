@@ -1,0 +1,20 @@
+<!-- Вывод данных о студентах с помощью конструкции {{ .ИМЯ }} -->
+<div class="wrapper">
+    <p class="caption">Список всех студентов</p>
+
+    {{ range .Data }}
+
+    <div class="item">
+        <p><b>Имя:</b> <a href="/Students/{{ .Id }}">{{ .Name }}</a></p>
+        <p><b>Фамилия:</b> {{ .Surname }}</a></p>
+        <p><b>Возраст:</b> {{ .Age }}</p>
+        <p><b>Группа:</b> {{ .Group }}</p>
+
+        <div class="buttons">
+            <a href="/Student/update/{{ .Id }}" class="button">Редактировать</a>
+            <a href="/Student/delete/{{ .Id }}" class="button red">Удалить</a>
+        </div>
+    </div>
+
+    {{ end }}
+</div>

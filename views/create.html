@@ -1,0 +1,39 @@
+<div class="wrapper">
+    <p class="caption">
+        Добавление нового студента
+    </p>
+    
+    <form action="" method="POST">
+        <input type="text" id="name" name="name" placeholder="Введите имя">
+        <input type="text" id="surname" name="surname" placeholder="Введите фамилию">
+        <input type="text" id="age" name="age" placeholder="Введите возраст">
+        <input type="text" id="group" name="group" placeholder="Введите группу">
+    
+        <input type="submit" value="Добавить" class="button">
+    </form>
+</div>
+
+<script>
+    // Нахождение на странице формы для заполнения
+    const form = document.querySelector("form");
+
+    // Обработка события отправки формы
+    form.onsubmit = async (e) => {
+        e.preventDefault();
+
+        // Отправка POST-запроса с данными из формы по указанному URL на сервер
+        let response = await fetch('/Student/create', {
+            method: 'POST',
+            body: new FormData(form),
+        });
+
+        // Получение результата работы (статуса ошибки)
+        let result = await response.status;
+
+        // Вывод сообщения в случае, если данные удалось добавить
+        if (result == 200) {
+            alert("Данные успешно добавлены");
+        }
+    };
+
+</script>
