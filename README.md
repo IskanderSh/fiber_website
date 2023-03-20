@@ -2,11 +2,11 @@
 A website using Fiber to work with a list of students
 
 ## Files
--[main.go](#main)
--[data.json](#data)
--[views](#views)
--[public](#public)
--[app](#app)
+- [main.go](#main)
+- [data.json](#data)
+- [views](#views)
+- [public](#public)
+- [app](#app)
 
 ### main.go <div id="main"></div>
 Here is written the head of programm. Adding work with HTML, starting the web-server, adding the ability to display static(css) files, working with all links and so on.
@@ -20,11 +20,12 @@ All html patterns written here
 ### public <div id="public"></div>
 Here is static files, for now it is empty, but I think it will better in the future
 
+----------------------------------------------------------------------------------
 ### app <div id="app"></div>
--[data.go](#data.go)
--[funcs.go](#funcs.go)
--[model.go](#model.go)
--[routes.go](#routes.go)
+- [data.go](#data.go)
+- [funcs.go](#funcs.go)
+- [model.go](#model.go)
+- [routes.go](#routes.go)
 
 #### data.go <div id="data.go"></div>
 Here is written functions to READ, WRITE, UPDATE and REMOVE students from data and site.
